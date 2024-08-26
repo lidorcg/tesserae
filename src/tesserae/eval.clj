@@ -420,7 +420,8 @@
         (catch Throwable t
           (transact! (conj id-txs (dissoc cell-ent :cell/ret)) tx-meta))))))
 
-(def default-timeout 2e4)
+;; 60 secs
+(def default-timeout 6e4)
 
 (defn eval-cell-task [{:keys [cell eval-fn timeout]
                        :or   {timeout default-timeout}}]

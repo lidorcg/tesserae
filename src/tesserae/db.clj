@@ -122,6 +122,9 @@
                        :else x)) sheet))
 
 
+  (stuffs.prepl/remote-eval!
+    `(do
+       (range 10)))
 
   (stuffs.prepl/remote-eval!
     `(do
@@ -199,5 +202,4 @@
   (d/touch (d/entity @test-conn 3))
 
   )
-
 
